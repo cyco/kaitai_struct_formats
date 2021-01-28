@@ -19,7 +19,7 @@ types:
         size: 4
       - id: len
         type: u4
-        if: type != "VERS" and type != "ENDF"
+        if: type != "VERS"
       - id: content
         type:
           switch-on: type
@@ -278,7 +278,7 @@ types:
         type: u2
         repeat: expr
         repeat-expr: 3
-  zone_hotspots: 
+  zone_hotspots:
     seq:
       - id: zone_id
         type: u2
@@ -402,7 +402,7 @@ types:
         contents: "IPUZ"
       - id: size
         type: u4
-        if: index != -1 
+        if: index != -1
       - id: unknown1
         type: u4
         if: index != -1
@@ -421,9 +421,7 @@ types:
         type: u2
         if: index != -1
   endf:
-    seq:
-      - id: empty
-        type: u4
+    seq: []
   characters:
     seq:
       - id: characters
