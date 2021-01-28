@@ -450,7 +450,8 @@ types:
         type: u2
         enum: movement_type
         if: index != 0xFF_FF
-      - type: char_frame
+      - id: frame_1
+        type: char_frame
         if: index != 0xFF_FF
       - id: frame_2
         type: char_frame
