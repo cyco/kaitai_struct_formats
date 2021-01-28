@@ -417,7 +417,7 @@ types:
         repeat: expr
         repeat-expr: 5
         if: index != 0xFF_FF
-      - id: item_1
+      - id: item
         type: u2
         if: index != 0xFF_FF
   endf:
