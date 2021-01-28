@@ -148,19 +148,6 @@ types:
         20: health_is_greater_than
         21: unused
         22: find_item_is
-        23: placed_item_is_not
-        24: hero_is_at
-        25: shared_counter_is
-        26: shared_counter_is_less_than
-        27: shared_counter_is_greater_than
-        28: games_won_is
-        29: drops_quest_item_at
-        30: has_any_required_item
-        31: counter_is_not
-        32: random_is_not
-        33: shared_counter_is_not
-        34: is_variable
-        35: games_won_is_greater_than
   instruction:
     seq:
       - id: opcode
@@ -213,8 +200,6 @@ types:
         33: change_zone
         34: set_shared_counter
         35: add_to_shared_counter
-        36: set_random
-        37: add_health
   monster:
     seq:
       - id: character
