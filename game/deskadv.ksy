@@ -97,18 +97,18 @@ types:
         contents: "IACT"
       - id: size
         type: u4
-      - id: condition_count
+      - id: num_conditions
         type: u2
       - id: conditions
         type: condition
         repeat: expr
-        repeat-expr: condition_count
-      - id: instruction_count
+        repeat-expr: num_conditions
+      - id: num_instructions
         type: u2
       - id: instructions
         type: instruction
         repeat: expr
-        repeat-expr: instruction_count
+        repeat-expr: num_instructions
   condition:
     seq:
       - id: opcode
@@ -312,50 +312,50 @@ types:
         contents: "IZAX"
       - id: size
         type: u4
-      - id: unknown_count
+      - id: unknown
         type: u2
-      - id: monster_count
+      - id: num_monsters
         type: u2
       - id: monsters
         type: monster
         repeat: expr
-        repeat-expr: monster_count
-      - id: required_item_count
+        repeat-expr: num_monsters
+      - id: num_required_items
         type: u2
       - id: required_items
         type: u2
         repeat: expr
-        repeat-expr: required_item_count
-      - id: goal_item_count
+        repeat-expr: num_required_items
+      - id: num_goal_items
         type: u2
       - id: goal_items
         type: u2
         repeat: expr
-        repeat-expr: goal_item_count
+        repeat-expr: num_goal_items
   zone_auxiliary_2:
      seq:
       - id: marker
         contents: "IZX2"
       - id: size
         type: u4
-      - id: provided_item_count
+      - id: num_provided_items
         type: u2
       - id: provided_items
         type: u2
         repeat: expr
-        repeat-expr: provided_item_count
+        repeat-expr: num_provided_items
   zone_auxiliary_3:
      seq:
       - id: marker
         contents: "IZX3"
       - id: size
         type: u4
-      - id: npc_count
+      - id: num_npcs
         type: u2
       - id: npc
         type: u2
         repeat: expr
-        repeat-expr: npc_count
+        repeat-expr: num_npcs
   zone_auxiliary_4:
      seq:
       - id: marker
@@ -366,12 +366,12 @@ types:
         type: u2
   zones:
     seq:
-      - id: zone_count
+      - id: num_zones
         type: u2
       - id: zones
         type: zone
         repeat: expr
-        repeat-expr: zone_count
+        repeat-expr: num_zones
   puzzles:
     seq:
       - id: puzzles
